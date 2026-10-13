@@ -8,8 +8,8 @@ class CategoriaController extends Controller
 {
     public function index()
     {
-        $categorias = Categoria::all();
+        $categoria = Categoria::with('equipos')->find(1);
 
-        dd($categorias);
+        dd($categoria);
     }
 }
